@@ -6,10 +6,6 @@
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Construyendo la Imagen de Docker](#construyendo-la-imagen-de-docker)
 - [Compilación de Fuzzers](#compilación-de-fuzzers)
-- [Ejecutando los Fuzzers](#ejecutando-los-fuzzers)
-- [Análisis de los Resultados de Fuzzing](#análisis-de-los-resultados-de-fuzzing)
-- [Contribuyendo](#contribuyendo)
-- [Licencia](#licencia)
 
 ## Introducción
 
@@ -39,5 +35,14 @@ A continuación se muestra un desglose de los archivos y directorios relevantes:
 Para construir la imagen Docker, ejecute el siguiente comando:
 
 ```bash
-python3 infra/helper.py build_image angular
+python3 infra/helper.py build_image softwareSeguro
+```
+### Compilación de Fuzzers
+
+Una vez que la imagen de Docker esté construida, puedes compilar los fuzzers. La compilación de fuzzers los prepara para ejecutarse dentro del marco OSS-Fuzz.
+
+```bash
+python3 infra/helper.py build_fuzzers --sanitizer address softwareSeguro
+python3 infra/helper.py run_fuzzer softwareSeguro fuzz_parser
+```
 
