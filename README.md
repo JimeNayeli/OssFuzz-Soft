@@ -1,4 +1,4 @@
-# Proyecto Angular OSS-Fuzz
+# Proyecto OSS-Fuzz
 
 ## Tabla de Contenido
 - [Introducción](#introducción)
@@ -9,7 +9,7 @@
 
 ## Introducción
 
-Este proyecto integra **Angular** con **OSS-Fuzz** para encontrar automáticamente errores en el software mediante pruebas fuzz. Las pruebas fuzz son un tipo de pruebas automatizadas que generan datos aleatorios para probar varias partes de un programa e identificar vulnerabilidades y fallos.
+Este proyecto integra javascript con **OSS-Fuzz** para encontrar automáticamente errores en el software mediante pruebas fuzz. Las pruebas fuzz son un tipo de pruebas automatizadas que generan datos aleatorios para probar varias partes de un programa e identificar vulnerabilidades y fallos.
 
 ## Prerrequisitos
 
@@ -25,7 +25,7 @@ Antes de comenzar, asegúrese de tener instalado lo siguiente:
 A continuación se muestra un desglose de los archivos y directorios relevantes:
 
 - **Dockerfile**: Define el entorno para crear y ejecutar fuzzers para Angular.
-- **build.sh**: Script para compilar Angular y sus fuzzers.
+- **build.sh**: Script para compilar los fuzzers.
 - **compiler/**: Contiene cualquier modificación o configuración específica para el compilador Angular.
 - **babel.config.json**: Archivo de configuración para Babel, utilizado para transpilar código JavaScript.
 - **infra/helper.py**: Script auxiliar OSS-Fuzz para crear y ejecutar fuzzers.
